@@ -36,7 +36,7 @@ function sendSpreadsheetAsExcel(){
   // Create multipart/form-data
   const payload = Utilities.newBlob(
     '--'+boundary+'\r\nContent-Disposition: form-data; name="roomId"\r\n\r\n'+webexRoom+'\r\n' +
-    '--'+boundary+'\r\nContent-Disposition: form-data; name="text"\r\n\r\nファイルです！\r\n' +
+    '--'+boundary+'\r\nContent-Disposition: form-data; name="text"\r\n\r\nHere is the File!\r\n' +
     '--'+boundary+'\r\nContent-Disposition: form-data; name="files"; filename="myexcel.xlsx"\r\n'+  
         'Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n\r\n').getBytes()
     .concat(xlsxFile.getBytes())
